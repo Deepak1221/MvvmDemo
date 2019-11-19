@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ScrollView
+        android:id="@+id/sign_up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/h_username"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_launcher" />
+
+            <EditText
+                android:id="@+id/et_fname"
+                style="@style/signup"
+                android:hint="@string/h_fname"
+                android:inputType="text"
+                android:maxLength="@integer/length_name" />
+
+            <EditText
+                android:id="@+id/et_email"
+                style="@style/signup"
+                android:hint="@string/h_email"
+                android:inputType="textEmailAddress"
+                android:maxLength="@integer/length_email" />
+
+            <EditText
+                android:id="@+id/et_password"
+                style="@style/signup"
+                android:hint="@string/h_password"
+                android:inputType="textPassword"
+                android:maxLength="@integer/length_password" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                style="@style/signup"
+                android:hint="@string/h_number"
+                android:inputType="phone"
+                android:maxLength="@integer/length_phone" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bt_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sign_up"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:text="@string/signup" />
+
+
+</RelativeLayout>
